@@ -27,14 +27,16 @@ def convert(data):
         if info_source=="Binary":
             atri=ns.decimalToBinary
             originalFormat="Binary"
+            data=int(data)
 
         elif info_source=="Octal" :
             atri=ns.decimalToOctal  
             originalFormat="Octal" 
-
+            data=int(data)
         elif info_source=="Hexa" :   
             atri=ns.decimalToHexa
             orinalFormat="Hexa"
+            data=int(data)
 
     elif data_source=="Binary":
         if info_source=="Decimal":
