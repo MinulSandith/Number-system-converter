@@ -33,9 +33,9 @@ def convert(data):
             atri=ns.decimalToOctal  
             originalFormat="Octal" 
             data=int(data)
-        elif info_source=="Hexa" :   
+        elif info_source=="Hexa" :
             atri=ns.decimalToHexa
-            orinalFormat="Hexa"
+            originalFormat="Hexa"
             data=int(data)
 
     elif data_source=="Binary":
@@ -76,10 +76,13 @@ def convert(data):
         elif info_source=="Decimal" :   
             atri=ns.hexaToDecimal
             originalFormat="Decimal"
+    if data_source==info_source:
+        info=col1.header("{} - {}".format(info_source,data))
+        return
     try:
         answer=atri(data)
         info=col1.header("{} - {}".format(originalFormat,answer))
-        
-    except:
+
+    except Exception:
         info=col1.header("Enter a number")
-convert_btn=st.button(label='Convert',on_click=convert(data))
+convert_btn=st.button(label='Convert',on_click=convert,args=(data,))
