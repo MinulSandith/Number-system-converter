@@ -39,7 +39,12 @@ Then open the URL shown in your terminal (usually `http://localhost:8501`).
 1. Select the number system you're converting **from** in the "From" dropdown.
 2. Select the number system you're converting **to** in the "To" dropdown.
 3. Enter the number you want to convert.
-4. Click **Convert** to see the result.
+4. Click **Convert** to see the result, rendered as `<Format> - <Result>`.
+
+## Known Limitations
+
+- Input is not validated against the selected source format before conversion, so an invalid number (e.g. letters in a "Binary" input) shows a generic "Enter a number" message rather than a specific error.
+- Only positive whole numbers are supported for Decimal input.
 
 ## Project Structure
 
