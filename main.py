@@ -33,9 +33,9 @@ def convert(data):
             atri=ns.decimalToOctal  
             originalFormat="Octal" 
             data=int(data)
-        elif info_source=="Hexa" :   
+        elif info_source=="Hexa" :
             atri=ns.decimalToHexa
-            orinalFormat="Hexa"
+            originalFormat="Hexa"
             data=int(data)
 
     elif data_source=="Binary":
